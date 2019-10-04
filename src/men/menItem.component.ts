@@ -29,6 +29,13 @@ export class MenItemComponent{
             "menProdCode":"men-003",
             "price":1750,
             "imageUrl":"assets/images/shirt.png"
+        },
+        {
+            "menProdId":4,
+            "menProdName":"Shoes",
+            "menProdCode":"men-004",
+            "price":1250,
+            "imageUrl":"assets/images/shirt.png"
         }
     ]
 }
