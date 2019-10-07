@@ -14,9 +14,9 @@ export class WomenItemComponent implements OnInit{
       }
       set listFilter(value:string){
             this._listFilter=value;
-            this.filteredWomentem=this.listFilter ? this.performFilter(this.listFilter):this.womenItems;
+            this.filteredWomenitem=this.listFilter ? this.performFilter(this.listFilter):this.womenItems;
       }
-      filteredWomentem:IWomenitem[]=[];
+      filteredWomenitem:IWomenitem[]=[];
       womenItems:IWomenitem[]=[];
       constructor(private womenitemService : WomenitemService){
             this.listFilter='a';
@@ -31,7 +31,7 @@ export class WomenItemComponent implements OnInit{
                  next:womenItems=>
                  {
                        this.womenItems=this.womenItems,
-                       this.filteredWomentem=this.womenItems;
+                       this.filteredWomenitem=this.womenItems;
                  },
                  error:err=>this.errorMessage=err
            });
