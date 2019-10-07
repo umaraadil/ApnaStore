@@ -1,0 +1,37 @@
+[
+    {
+        "menProdId":1,
+        "menProdName":"Shirt",
+        "menProdCode":"men-001",
+        "price":650,
+        "imageUrl":"assets/images/shirt.png"
+    },
+    {
+        "menProdId":2,
+        "menProdName":"Pant",
+        "menProdCode":"men-002",
+        "price":750,
+        "imageUrl":"assets/images/shirt.png"
+    },
+    {
+        "menProdId":3,
+        "menProdName":"Jeans",
+        "menProdCode":"men-003",
+        "price":1750,
+        "imageUrl":"assets/images/shirt.png"
+    },
+    {
+        "menProdId":4,
+        "menProdName":"Shoes",
+        "menProdCode":"men-004",
+        "price":1250,
+        "imageUrl":"assets/images/shirt.png"
+    },
+    {
+        "menProdId":5,
+        "menProdName":"Hat",
+        "menProdCode":"men-005",
+        "price":250,
+        "imageUrl":"assets/images/shirt.png"
+    }
+]

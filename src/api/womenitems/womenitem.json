@@ -1,0 +1,16 @@
+[
+    {
+        "womenProdId":1,
+        "womenProdName":"Shirt",
+        "womenProdCode":"women-001",
+        "price":650,
+        "imageUrl":"assets/images/shirt.png"
+    },
+    {
+        "womenProdId":2,
+        "womenProdName":"Pant",
+        "womenProdCode":"women-002",
+        "price":750,
+        "imageUrl":"assets/images/shirt.png"
+    }
+]
