@@ -10,10 +10,10 @@ import {catchError,tap} from 'rxjs/operators'
 export class MenitemService{
     private menItemlistUrl='api/menItems/menitem.json';
     constructor(private http:HttpClient){}
-    getMenitems():Observable<IMenitem[]>{
-        return this.http.get<IMenitem[]>(this.menItemlistUrl).pipe(
-            tap(data =>console.log('All : '+JSON.stringify(data))),
-            catchError(this.handleError)
+         getMenitems():Observable<IMenitem[]>{
+            return this.http.get<IMenitem[]>(this.menItemlistUrl).pipe(
+                tap(data =>console.log('All : '+JSON.stringify(data))),
+                catchError(this.handleError)
         );
     }
     private handleError(err:HttpErrorResponse){

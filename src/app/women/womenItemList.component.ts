@@ -19,7 +19,7 @@ export class WomenItemComponent implements OnInit{
       filteredWomentem:IWomenitem[]=[];
       womenItems:IWomenitem[]=[];
       constructor(private womenitemService : WomenitemService){
-
+            this.listFilter='a';
       }
       performFilter(filterBy:string):IWomenitem[]{
             filterBy=filterBy.toLocaleLowerCase();

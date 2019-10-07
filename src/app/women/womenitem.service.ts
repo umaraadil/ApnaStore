@@ -4,13 +4,15 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 
-@Injectable()
+@Injectable({
+    providedIn:'root'
+})
 export class WomenitemService{
     private womenItemlistUrl='api/womenitems/womenitem.json';
     constructor(private http:HttpClient){}
         getWomenitems():Observable<IWomenitem[]>{
             return this.http.get<IWomenitem[]>(this.womenItemlistUrl).pipe(
-                tap(data=>console.log('All : '+JSON.stringify(data))),
+                tap(data => console.log('All : '+JSON.stringify(data))),
                 catchError(this.handleError)
             );
         }
