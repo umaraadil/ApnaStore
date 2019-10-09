@@ -8,7 +8,7 @@ export class ChildrenitemComponent {
 
     pageTitle='Children Items';
  
-    childrenItems:any[]=[
+    childrenItem:any[]=[
         {
         "chItemId" : 1,        
         "chItemCode": 'CH-001',
