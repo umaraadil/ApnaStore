@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { WelcomepageComponent } from './home/welcomepage.component';
 import { MenItemComponent } from './men/menItemList.component';
 import { WomenItemComponent } from './women/womenItemList.component';
+import { ChildrenitemComponent } from './children/childrenitem.component';
 
 @NgModule({
   declarations:[
     AppComponent,
     MenItemComponent,
     WelcomepageComponent,
-    WomenItemComponent
+    WomenItemComponent,
+    ChildrenitemComponent
   ],
   imports: [
     BrowserModule,
@@ -22,9 +24,10 @@ import { WomenItemComponent } from './women/womenItemList.component';
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot([
+      {path:'womenItems',component:WomenItemComponent},
       {path:'menItems',component:MenItemComponent},
       {path:'welcomepage',component:WelcomepageComponent},
-      {path:'womenItems',component:WomenItemComponent},
+      {path:'childrenItems',component:ChildrenitemComponent},
       {path:'',redirectTo:'welcomepage',pathMatch:'full'},
       {path:'**',redirectTo:'welcomepage',pathMatch:'full'}
     ])

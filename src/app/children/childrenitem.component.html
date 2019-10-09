@@ -1,0 +1,38 @@
+<div class='card'>
+    <div class ='card-header'>
+        {{pageTitle}}
+    </div>
+    <div class ='card-body'>
+        <div class='row'>
+            <div class='col-md-2'>Filter by:</div>
+            <div class='col-md-4'>
+                <input type='text'
+                [(ngModel)]='listFilter'/>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-md-6'>
+                <h3>Filtered By:{{listFilter}}</h3>
+            </div>
+        </div>
+        <div class='table-responsive'>
+            <table class='table'>
+            
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Code</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let item of childrenItems'>
+                        <td>{{item.chItemName}}</td>
+                        <td>{{item.chItemCode}}</td>
+                        <td>{{item.price}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

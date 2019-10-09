@@ -4,9 +4,11 @@ import { WomenitemService } from './womenitem.service';
 
 @Component({
 //     selector:'',
-    templateUrl:'./womenItemList.component.html'
+    templateUrl:'./womenItemList.component.html',
+    styleUrls:['./womenItemList.component.css']
 })
 export class WomenItemComponent implements OnInit{
+      pageTitle='ApnaStore';
       errorMessage='';
       _listFilter='';
       get listFilter():string{
@@ -16,10 +18,10 @@ export class WomenItemComponent implements OnInit{
             this._listFilter=value;
             this.filteredWomenitem=this.listFilter ? this.performFilter(this.listFilter):this.womenItems;
       }
-      filteredWomenitem:IWomenitem[]=[];
+      filteredWomenitem:IWomenitem[];
       womenItems:IWomenitem[]=[];
       constructor(private womenitemService : WomenitemService){
-            this.listFilter='a';
+            this.listFilter='';
       }
       performFilter(filterBy:string):IWomenitem[]{
             filterBy=filterBy.toLocaleLowerCase();
@@ -30,7 +32,7 @@ export class WomenItemComponent implements OnInit{
            this.womenitemService.getWomenitems().subscribe({
                  next:womenItems=>
                  {
-                       this.womenItems=this.womenItems,
+                       this.womenItems=womenItems,
                        this.filteredWomenitem=this.womenItems;
                  },
                  error:err=>this.errorMessage=err
