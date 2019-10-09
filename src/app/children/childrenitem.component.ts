@@ -28,22 +28,22 @@ export class ChildrenitemComponent {
         "price":200
        }
     ];
-    // _listItem='ab';
-    // get listFilter():string{
-    //     return this._listItem;
-    // }
-    // set listFilter(value:string){
-    //     this._listItem=value;
-    //     this.filteredChilitem=this.listFilter ? this.performFilter(this.listFilter):this.childrenItems;
-    // }
-    // filteredChilitem:IChildrenitem[];
-    // childrenItems:IChildrenitem[]=[];
+    _listItem='ab';
+    get listFilter():string{
+        return this._listItem;
+    }
+    set listFilter(value:string){
+        this._listItem=value;
+        this.filteredChilitem=this.listFilter ? this.performFilter(this.listFilter):this.childrenItems;
+    }
+    filteredChilitem:IChildrenitem[];
+    childrenItems:IChildrenitem[]=[];
 
-    // performFilter(filterBy:string): IChildrenitem[]{
-    //     filterBy=filterBy.toLocaleLowerCase();
-    //     return this.childrenItems.filter((item:IChildrenitem)=>
-    //     item.chItemName.toLocaleLowerCase().indexOf(filterBy)!==-1);
-    // }
+    performFilter(filterBy:string): IChildrenitem[]{
+        filterBy=filterBy.toLocaleLowerCase();
+        return this.childrenItems.filter((item:IChildrenitem)=>
+        item.chItemName.toLocaleLowerCase().indexOf(filterBy)!==-1);
+    }
 
 
 }
